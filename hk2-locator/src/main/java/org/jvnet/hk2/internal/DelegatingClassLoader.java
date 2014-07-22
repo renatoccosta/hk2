@@ -98,16 +98,16 @@ class DelegatingClassLoader<T> extends ClassLoader {
 		return null;
 	}	
 	
-	@Override
-	public int hashCode() {
-	    int code = (getParent() == null) ? 0 : getParent().hashCode();
-	    
-	    for (ClassLoader delegate : delegates) {
-	        code ^= delegate.hashCode();
-	    }
-	    
-	    return code;
-	}
+//	@Override
+//	public int hashCode() {
+//	    int code = (getParent() == null) ? 0 : getParent().hashCode();
+//	    
+//	    for (ClassLoader delegate : delegates) {
+//	        code ^= delegate.hashCode();
+//	    }
+//	    
+//	    return code;
+//	}
 	
 	private final static boolean safeEquals(Object a, Object b) {
 	    if (a == b) return true;
